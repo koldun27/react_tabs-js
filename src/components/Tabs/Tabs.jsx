@@ -14,7 +14,7 @@ export const Tabs = ({ tabs, activeTabId, onTabSelected }) => {
       <div className="tabs is-boxed">
         <ul>
           {tabs.map(a => (
-            <li className={cn({ 'is-active': a.id === tabId })} data-cy="Tab">
+            <li key={a.id} className={cn({ 'is-active': a.id === tabId })} data-cy="Tab">
               <a
                 href={`#${a.id}`}
                 data-cy="TabLink"
